@@ -24,6 +24,7 @@ hs_err_pid*
 # STS
 RemoteSystemsTempFiles
 .metadata
+.recommenders
 
 # Custom
 application-config/bin

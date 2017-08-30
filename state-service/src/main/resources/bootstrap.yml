@@ -1,0 +1,15 @@
+# Properties para todos os perfis (profiles):
+---
+spring:
+  application:
+    name: state-service # Nome para registrar no Eureka
+  cloud:
+    config:
+      uri: http://localhost:8001  # Spring Cloud Config Server deve estar rodando em localhost, porta 8001.  
+server:
+  port: ${PORT:${SERVER_PORT:0}}   # Seleciona qualquer porta disponível, caso a mesma não seja especificada
+  
+# Permite o Eureka reconhecer dois apps do mesmo tipo, no mesmo host, em instancias separadas
+eureka:
+  instance:
+    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}  

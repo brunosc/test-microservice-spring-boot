@@ -34,4 +34,4 @@ E nas dependências:
 </dependency>
 ```
 
-Já no código-fonte, adicionar a anotação ```@@EnableEurekaServer``` na classe da aplicação.
+Já no código-fonte, adicionar a anotação ```@EnableEurekaServer``` na classe da aplicação.
