@@ -1,0 +1,11 @@
+---
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/brunosc/test-microservice-spring-boot
+          # Nome da pasta no repositorio informado acima em que contem as configuracoes da aplicacao
+          searchPaths: application-config
+server:
+  port: 8001
