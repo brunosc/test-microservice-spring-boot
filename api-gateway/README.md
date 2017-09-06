@@ -19,12 +19,12 @@ Essa dependência inclui o Ribbon (Load Balance) e Hystrix (Circuit Breaker)
 Para fazer a chamada dos serviços, foi utilizado o Netflix Feign. O Feign é um cliente REST declarativo, que permite escrever chamadas REST sem código implementado. Ele é uma alternativa ao RestTemplate.
 
 Adicionar a dependência:
-	```
-	<dependency>
-		<groupId>org.springframework.cloud</groupId>
-		<artifactId>spring-cloud-starter-feign</artifactId>
-	</dependency>
-	```
+```
+<dependency>
+	<groupId>org.springframework.cloud</groupId>
+	<artifactId>spring-cloud-starter-feign</artifactId>
+</dependency>
+```
 
 Deve-se definir uma interface para cada cliente, utilizando as anotações do Feign. O Spring Cloud irá implementar em run-time o processo de chamada e resposta de cada cliente REST, fazendo o scan pelas interfaces.
 
@@ -35,7 +35,7 @@ Com o Feign, o Ribbon é automaticamente habilitado.
 ### Exemplo de chamadas:
 
 | Cliente chama        | Zuul chama        |
-| ---------------------------------------- |
+| -------------------- | ----------------- |
 | localhost:8080/city  | localhost:55698/  |
 | localhost:8080/state | localhost:45782/  |
 
